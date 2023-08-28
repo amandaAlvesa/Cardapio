@@ -1,0 +1,13 @@
+package com.example.cardapio.dto;
+
+import com.example.cardapio.entities.Food;
+
+public record FoodResponseDTO(Long id, String title, String image, Integer price) {
+
+	public void FoodResponseDTO(Food food){
+		this.id = food.getId();
+		this.title = food.getTitle();
+		this.image = food.getImage();
+		this.price = food.getPrice();
+	}
+}
